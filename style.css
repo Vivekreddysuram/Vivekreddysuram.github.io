@@ -1,0 +1,309 @@
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+}
+
+.anime-goku {
+    width: 300px;
+    height: auto;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+nav {
+    text-align: center;
+    margin-right: 4in;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.images {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.bio-content {
+    text-align: justify;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 0px;
+    background-color: lightblue;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+#project-slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-slide {
+    display: none;
+    flex: 0 0 auto;
+}
+
+.active {
+    display: block;
+}
+
+/* Hobbies page styles */
+#hobbies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.images {
+    flex: 1;
+}
+
+.images img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.text {
+    flex: 1;
+    padding-left: 20px;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .anime-goku {
+        width: 100px;
+        right: 10px;
+        top: 10px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .dark-mode-toggle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .images img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-gifs {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 200px;
+}
+
+.contact-gifs img {
+    width: 10px; 
+    height: auto;
+}
+
+.contact-gifs {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+}
+
+.contact-gifs video {
+    width: 45%; 
+    height: auto;
+}
+
+/* Dark mode styles */
+body {
+    --background-color: white; 
+    --text-color: black; 
+}
+
+/* Update styles for dark mode */
+body.dark {
+    --background-color: black; 
+    --text-color: white; 
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+    position: relative;
+    top: 100%;
+    
+    background-color: lightblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#darkModeToggle:checked + .dark-mode-toggle {
+    background-color: darkblue;
+    color: white;
+}
+
+
+form{
+    padding: 40px 0;
+}
+.homem{
+    padding-top: 100px;
+}
+
